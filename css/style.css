@@ -1,0 +1,254 @@
+body {
+  background-color: #1b1412;
+  color: #f5f2ed;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* navbar */
+.navbar {
+  background-color: #000;
+  border-bottom: 1px solid #3e2f29;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #f5f2ed !important;
+  letter-spacing: 1px;
+}
+
+.brand-highlight {
+  color: #c5a572;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: #f5f2ed !important;
+  margin-left: 15px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #c5a572 !important;
+}
+
+/* menu */
+.menu-header {
+  text-align: center;
+  padding: 90px 40px 150px;
+  background: url('../images/menu-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.menu-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #c5a572;
+}
+
+.menu-header p {
+  font-size: 1.1rem;
+  color: #d8b98b;
+}
+
+/* filter buttons */
+.menu-filters {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-filters button {
+  background: transparent;
+  border: 1.5px solid #c5a572;
+  color: #c5a572;
+  margin: 5px;
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.menu-filters button.active,
+.menu-filters button:hover {
+  background-color: #c5a572;
+  color: #1b1412;
+}
+
+/* menu cards */
+.menu-card {
+  background-color: #2b201d;
+  border: none;
+  color: #f5f2ed;
+  transition: all 0.4s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(197, 165, 114, 0.3);
+}
+
+.menu-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.price {
+  color: #c5a572;
+  font-weight: 600;
+}
+
+.btn-elegant {
+  background-color: #c5a572;
+  color: #1b1412;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+}
+
+.btn-elegant:hover {
+  background-color: #b6935d;
+  color: #fff;
+}
+
+/* modal */
+.modal-content {
+  background-color: #2b201d;
+  color: #f5f2ed;
+  border: 1px solid #c5a572;
+}
+
+/* footer */
+.footer {
+  background-color: #000;
+  padding: 30px 0;
+  color: #d8b98b;
+  margin-top: 60px;
+}
+
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #c5a572;
+  margin-bottom: 8px;
+}
+
+
+
+/* GALLERY */
+/* hero section */
+.hero-gallery {
+  background: url('../images/gallery-hero.jpg') center/cover no-repeat;
+  height: 50vh;
+  position: relative;
+  color: #f5f2ed;
+  background-attachment: fixed;
+}
+.hero-gallery .hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-gallery h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #c5a572;
+}
+.hero-gallery p {
+  font-size: 1.2rem;
+  color: #d8b98b;
+}
+
+/* gallery */
+.gallery-card {
+  border: none;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+.gallery-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(197, 165, 114, 0.3);
+}
+.gallery-card img {
+  height: 280px;
+  object-fit: cover;
+  width: 100%;
+}
+.gallery-card .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(27, 20, 18, 0.85);
+  width: 100%;
+  color: #f5f2ed;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.gallery-card:hover .overlay {
+  transform: translateY(0);
+}
+
+/* lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 8px;
+}
+.caption {
+  text-align: center;
+  color: #c5a572;
+  margin-top: 10px;
+}
+.close {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #c5a572;
+}
+/* Fade-in on scroll */
+[data-fade] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+[data-fade].show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Direction variants */
+[data-fade="left"] {
+    transform: translateX(-30px); 
+}
+[data-fade="right"] { 
+    transform: translateX(30px); 
+}
+[data-fade="up"] { 
+    transform: translateY(30px); 
+}
+[data-fade="down"] { 
+    transform: translateY(-30px); 
+}

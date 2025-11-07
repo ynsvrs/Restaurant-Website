@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIE Dine | Gallery</title>
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="brand-highlight">SIE</span> Dine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero section -->
+  <section class="hero-gallery text-center d-flex align-items-center justify-content-center">
+    <div class="hero-overlay">
+      <h1 data-fade="down">Our Culinary Gallery</h1>
+      <p data-fade="up">Experience the art of fine dining</p>
+    </div>
+  </section>
+
+  <!-- intro -->
+  <section class="gallery-intro container my-5 py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6" data-fade="right">
+        <h2>Discover the Essence of SIE Dine</h2>
+        <p>Step into our world of culinary elegance — from our luxurious interiors to private dining spaces designed for unforgettable gatherings.</p>
+        <a href="reservation.html" class="btn btn-elegant mt-3">Book Now</a>
+      </div>
+      <div class="col-md-6 text-center" data-fade="left">
+        <img src="images/gallery-intro.jpg" class="img-fluid rounded-3 shadow-lg" alt="Restaurant Interior">
+      </div>
+    </div>
+  </section>
+
+  <!-- filter buttons -->
+  <div class="menu-filters mb-4">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="dining">Dining Rooms</button>
+    <button data-filter="private">Private Events</button>
+    <button data-filter="interior">Interior</button>
+  </div>
+
+  <!-- gallery grid-->
+  <div class="container pb-5">
+    <div class="row g-4 justify-content-center" id="gallery-container">
+      
+      <!-- for dining room -->
+      <div class="col-md-4 gallery-item" data-category="dining">
+        <div class="card gallery-card">
+          <img src="images/dining-room.jpg" alt="Dining Room" class="card-img-top">
+          <div class="overlay">
+            <h5>Dining Room</h5>
+            <p>Elegant ambiance with handcrafted furniture and candlelit tables.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- for private events -->
+      <div class="col-md-4 gallery-item" data-category="private">
+        <div class="card gallery-card">
+          <img src="images/private-event.jpg" alt="Private Event" class="card-img-top">
+          <div class="overlay">
+            <h5>Private Event</h5>
+            <p>Host your special occasions in our exclusive private halls.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- interior -->
+      <div class="col-md-4 gallery-item" data-category="interior">
+        <div class="card gallery-card">
+          <img src="images/interior1.jpg" alt="Interior Design" class="card-img-top">
+          <div class="overlay">
+            <h5>Interior Design</h5>
+            <p>Italian-inspired décor that blends modern luxury and tradition.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- something else -->
+      <div class="col-md-4 gallery-item" data-category="private">
+        <div class="card gallery-card">
+          <img src="images/wine-room.jpg" alt="Room" class="card-img-top">
+          <div class="overlay">
+            <h5>Room</h5>
+            <p>Exclusive area </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 gallery-item" data-category="interior">
+        <div class="card gallery-card">
+          <img src="images/lighting.jpg" alt="Lighting" class="card-img-top">
+          <div class="overlay">
+            <h5>Lighting</h5>
+            <p>Warm golden lighting to create the perfect dining atmosphere.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="">
+    <div class="caption" id="lightbox-caption"></div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="footer-title"><span class="brand-highlight">SIE</span> Dine</p>
+      <p>P. Sunghoon Street, Florence, Italy | +7 (777) 100-1769 | contact@siedine.com</p>
+      <p>&copy; 2025 SIE Dine. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

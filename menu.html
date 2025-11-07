@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIE Dine | Menu</title>
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="brand-highlight">SIE</span> Dine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header -->
+<header class="menu-header">
+  <h1 data-fade="down">Our Menu</h1>
+  <p data-fade="up">Experience the essence of Italian fine dining</p>
+</header>
+
+  <!-- filter Buttons -->
+  <div class="menu-filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="appetizer">Appetizers</button>
+    <button data-filter="main">Mains</button>
+    <button data-filter="dessert">Desserts</button>
+    <button data-filter="drink">Drinks</button>
+  </div>
+
+  <!-- menu items grid -->
+  <div class="container">
+    <div class="row g-4 justify-content-center" id="menu-container">
+      <div class="col-md-4 menu-item" data-category="appetizer">
+        <div class="card menu-card">
+          <img src="images/bruschetta.jpg" class="card-img-top" alt="Bruschetta">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bruschetta</h5>
+            <p class="card-text">Toasted sourdough with marinated cherry tomatoes and basil.</p>
+            <p class="price">$80</p>
+            <button class="btn btn-elegant" data-bs-toggle="modal" data-bs-target="#dishModal"
+              data-name="Bruschetta" data-desc="Classic Italian starter with fresh tomatoes and basil."
+              data-price="$8" data-img="images/bruschetta.jpg">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 menu-item" data-category="main">
+        <div class="card menu-card">
+          <img src="images/lasagna.jpg" class="card-img-top" alt="Lasagna">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lasagna</h5>
+            <p class="card-text">Handmade pasta layered with beef ragu, béchamel, and parmesan.</p>
+            <p class="price">$180</p>
+            <button class="btn btn-elegant" data-bs-toggle="modal" data-bs-target="#dishModal"
+              data-name="Lasagna" data-desc="Rich and creamy layers of authentic Italian lasagna."
+              data-price="$18" data-img="images/lasagna.jpg">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 menu-item" data-category="dessert">
+        <div class="card menu-card">
+          <img src="images/tiramisu.jpg" class="card-img-top" alt="Tiramisu">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tiramisu</h5>
+            <p class="card-text">Coffee-soaked ladyfingers layered with mascarpone and cocoa.</p>
+            <p class="price">$100</p>
+            <button class="btn btn-elegant" data-bs-toggle="modal" data-bs-target="#dishModal"
+              data-name="Tiramisu" data-desc="Authentic tiramisu with espresso and cocoa dusting."
+              data-price="$10" data-img="images/tiramisu.jpg">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 menu-item" data-category="drink">
+        <div class="card menu-card">
+          <img src="images/espresso.jpg" class="card-img-top" alt="Espresso">
+          <div class="card-body text-center">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text">Rich Italian espresso brewed to perfection.</p>
+            <p class="price">$50</p>
+            <button class="btn btn-elegant" data-bs-toggle="modal" data-bs-target="#dishModal"
+              data-name="Espresso" data-desc="Bold espresso shot, perfectly roasted for deep flavor."
+              data-price="$5" data-img="images/espresso.jpg">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal -->
+  <div class="modal fade" id="dishModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <img id="modal-img" src="" class="img-fluid" alt="">
+        <div class="modal-body text-center">
+          <h3 id="modal-name"></h3>
+          <p id="modal-desc"></p>
+          <p class="price" id="modal-price"></p>
+          <button type="button" class="btn btn-elegant" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="footer-title"><span class="brand-highlight">SIE</span> Dine</p>
+      <p>P. Sunghoon Street, Florence, Italy | +7 (777) 100-1769 | contact@siedine.com</p>
+      <p>&copy; 2025 SIE Dine. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
