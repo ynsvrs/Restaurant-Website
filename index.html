@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIE Dine | Home</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="brand-highlight">SIE</span> Dine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-home">
+    <div>
+      <h1 data-fade="down">Welcome to <span class="brand-highlight">SIE</span> Dine</h1>
+      <p data-fade="up">Experience authentic Italian cuisine in the heart of Florence</p>
+      <a href="reservation.html" class="btn btn-elegant" data-fade="up">Reserve Your Table</a>
+    </div>
+  </section>
+
+  <!-- Welcome -->
+  <section class="welcome-section container">
+    <div class="row align-items-center">
+      <div class="col-md-6" data-fade="right">
+        <h2>A Culinary Journey to Italy</h2>
+        <p>At SIE Dine, we bring the soul of Italian cuisine to your table. Every dish is crafted with passion, using the finest ingredients imported directly from Italy.</p>
+        <p>From handmade pasta to wood-fired pizzas, every bite tells a story of heritage, flavor, and excellence.</p>
+        <a href="about.html" class="btn btn-elegant mt-3">Learn More</a>
+      </div>
+      <div class="col-md-6 text-center" data-fade="left">
+        <img src="images/pizza.jpg" class="img-fluid rounded-3 shadow-lg" alt="Restaurant">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" data-fade="up">
+          <div class="feature-box">
+            <div style="font-size: 3rem;">🍷</div>
+            <h4>Premium Wine Selection</h4>
+            <p>Curated collection of Italian wines</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-fade="up">
+          <div class="feature-box">
+            <div style="font-size: 3rem;">👨‍🍳</div>
+            <h4>Master Chefs</h4>
+            <p>Experienced chefs from Italy</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-fade="up">
+          <div class="feature-box">
+            <div style="font-size: 3rem;">✨</div>
+            <h4>Elegant Atmosphere</h4>
+            <p>Perfect for any occasion</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="footer-title"><span class="brand-highlight">SIE</span> Dine</p>
+      <p>P. Sunghoon Street, Florence, Italy | +7 (777) 100-1769 | contact@siedine.com</p>
+      <p>&copy; 2025 SIE Dine. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
