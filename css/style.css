@@ -254,7 +254,7 @@ body {
 }
 /* INDEX PAGE */
 .hero-home {
-  background: url('../images/menu-bg.jpg') center/cover no-repeat;
+  background: url('../images/home.jpg') center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -350,7 +350,7 @@ body {
 
 /* ABOUT PAGE */
 .hero-about {
-  background: url('../images/gallery-hero.jpg') center/cover no-repeat;
+  background: url('../images/about1.jpg') center/cover no-repeat;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -363,6 +363,12 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   color: #c5a572;
+}
+
+.hero-about > div {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .story-section {
@@ -423,4 +429,130 @@ body {
 
 .value-box p {
   color: #d8b98b;
+}
+
+/* === CONTACT & RESERVATION PAGE === */
+.contact-section {
+  background-color: #1b1412;
+  color: #f5f2ed;
+  padding: 100px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* --- container --- */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* --- contact-info --- */
+.contact-info, .reservation-form {
+  flex: 1 1 45%;
+  background-color: #2b201d;
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #3e2f29;
+  box-shadow: 0 0 25px rgba(197, 165, 114, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-info:hover, .reservation-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(197, 165, 114, 0.3);
+}
+
+.contact-info h3, .reservation-form h3 {
+  font-family: 'Playfair Display', serif;
+  color: #c5a572;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #d8b98b;
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+/* Reservation Section */
+.reservation-section {
+  background-color: #2b201d;
+  color: #f5f2ed;
+  padding: 80px 0;
+}
+
+.reservation-form {
+  max-width: 700px;
+  background-color: #1f1715;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(197, 165, 114, 0.2);
+}
+
+.reservation-form .form-control {
+  background-color: #2b201d;
+  border: 1px solid #c5a572;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.reservation-form .form-control:focus {
+  outline: none;
+  border-color: #e3c37a;
+  box-shadow: 0 0 10px rgba(227, 195, 122, 0.3);
+}
+
+.btn-reserve {
+  background-color: #c5a572;
+  color: #1f1715;
+  font-weight: 500;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn-reserve:hover {
+  background-color: #e3c37a;
+  transform: scale(1.05);
+}
+
+#confirmation {
+  color: #c5a572;
+  font-style: italic;
+  display: none;
+}
+
+#confirmation.show {
+  display: block;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* === Fix placeholder visibility === */
+.reservation-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+/* === Make input text clearly visible === */
+.reservation-form .form-control {
+  color: #f5f2ed; 
+  font-weight: 400;
+}
+.reservation-section {
+  background-image: url('../images/stol.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIE Dine | Reservation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="brand-highlight">SIE</span> Dine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Reservation Section -->
+  <section id="reservation" class="reservation-section py-5">
+    <div class="container text-center" data-fade="up">
+      <h3 class="mb-4" style="color: #c5a572; font-family: 'Playfair Display', serif;">Make a Reservation</h3>
+
+      <form id="reserveForm" class="reservation-form mx-auto">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Full Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email" required>
+          </div>
+          <div class="col-md-6">
+            <input type="number" class="form-control" placeholder="Guests" min="1" required>
+          </div>
+          <div class="col-md-6">
+            <input type="date" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <input type="time" class="form-control" required>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" placeholder="Special requests" rows="3"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-reserve mt-4">Reserve Now</button>
+        <p id="confirmation" class="hidden mt-3">Thank you! Your reservation has been submitted.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="footer-title"><span class="brand-highlight">SIE</span> Dine</p>
+      <p>P. Sunghoon Street, Florence, Italy | +7 (777) 100-1769 | contact@siedine.com</p>
+      <p>&copy; 2025 SIE Dine. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
